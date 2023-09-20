@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorization</title>
+    <link href="./style.css" rel="stylesheet">
+    <script defer src="./index.js"></script>
+</head>
+<body>
+  <button id="openModalBtn">Написать</button>
+  <div class="modal hide">
+    <div class="modal-wrapper">
+      <h1 class="header-form">Стать партнёром проекта</h1>
+      <div class="photo">
+        <p>✱ Логотип (jpeg,png)</p>
+        <div class="upload-photo">
+          <img src="/practice-1/assets/upload_icon.svg">
+          <button class="upload-photo-btn">Выберите файл</button>
+        </div>
+      </div>
+      <form>
+        <div class="input-wrapper input-wrapper-small">
+          <input type="text" id="organization" required>
+          <label for="organization"><p>✱</p> Название организации</label>
+        </div>
+        <div class="input-wrapper input-wrapper-small">
+          <input type="text" id="phone" required>
+          <label for="phone"><p>✱</p> Телефон</label>
+        </div>
+        <div class="input-wrapper input-wrapper-small">
+          <input type="text" id="email" required>
+          <label for="email"><p>✱</p> E-mail</label>
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <label for="direction"><p>✱</p> Направление</label>
+          <select name="direction" id="direction">
+            <option value="ecology" selected>Экология</option>
+            <option value="tourism">Туризм</option>
+            <option value="sales">Продажи</option>
+          </select>
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" id="website" required autocomplete="avc.ru">
+          <img src="./assets/website.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" id="vk" required autocomplete="avc.ru">
+          <img src="./assets/vk.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" id="ok" required autocomplete="avc.ru">
+          <img src="./assets/ok.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" id="facebook" required autocomplete="avc.ru">
+          <img src="./assets/facebook.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" name="instagram" id="instagram" required autocomplete="avc.ru">
+          <img src="./assets/Instagram.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" name="youtube" id="youtube" required autocomplete="avc.ru">
+          <img src="./assets/youtube.svg" alt="иконка" class="input-icon">
+        </div>
+        <div class="input-wrapper input-wrapper-large">
+          <input type="text" name="chief" id="chief" required autocomplete="avc.ru">
+          <label for="direction">Руководитель</label>
+        </div>
+        <button class="form-btn form-btn-submit" type="submit">Стать партнёром проекта</button>
+        <a href="#" class="form-btn-cansel">Отменить</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

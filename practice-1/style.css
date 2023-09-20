@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'),
+    url(/practice-1/fonts/Montserrat-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato'),
+    url(/practice-1/fonts/Lato-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: local('PT Sans'),
+    url(/practice-1/fonts/PTSans-Regular.ttf)
+}
+
+#openModalBtn {
+    color: #E5266E;
+    background: white;
+    width: 147px;
+    height: 48px;
+    border: 1px solid #E5266E;
+    border-radius: 8px;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PTSans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+
+    top: 25%;
+    left: 25%;
+
+    width: 754px;
+    height: 1248px;
+
+    border: 1px solid #D6DADE;
+    border-radius: 12px;
+
+    flex-wrap: wrap;
+}
+
+.modal-wrapper {
+    display: block;
+    width: 558px;
+    height: 1248px;
+}
+
+.header-form {
+    display: block;
+    margin-top: 53px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.photo {
+    display: block;
+    float: right;
+    padding-left: 26px;
+    color:#6A6E72;
+}
+
+.photo p {
+    margin: 0 0 7px;
+}
+
+.upload-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 175px;
+    background-image: url(/practice-1/assets/avatar_back.svg);
+    background-repeat: no-repeat;
+}
+
+.upload-photo-btn {
+    background: none;
+    color: white;
+    border: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    color: #6A6E72;
+    border: 1px solid #D6DADE;
+}
+
+.input-wrapper p {
+    display: inline-block;
+    color: #D90000;
+}
+
+.input-wrapper p, h1 {
+    font-size: 12px;
+}
+
+.input-wrapper-small input {
+    width: 362px;
+    font-size: 24px;
+}
+
+.input-wrapper-large input,
+.input-wrapper-large select {
+    width: 558px;
+    font-size: 24px;
+    padding-right: 30px;
+}
+  
+.input-wrapper input,
+.input-wrapper select {
+    padding: 16px;
+    box-sizing: border-box;
+    border: 0;
+    color: #6A6E72;
+    height: 56px;
+}
+  
+.input-wrapper label {
+    position: absolute;
+    transform: translateY(-8px);
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.input-wrapper label {
+    padding-top: 0;
+    left: 16px;
+    font-size: 16px;
+}
+
+.input-wrapper .input-icon {
+    right: 10px;
+}
+
+.form-btn {
+    width: 557px;
+    height: 48px;
+    outline: none;
+    border-radius: 8px;
+    border: 0;
+}
+
+.form-btn-submit {
+    color: white;
+    background-color: #E5266E;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+a {
+    display: inline-block;
+    width: 557px;
+    height: 48px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.hide {
+    display: none;
+}
