@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) => {
   if (!validateEmail(email)) {
     showError('Пожалуйста введите корректный e-mail');
   } else if(!validateNumber(phone)) {
-    showError('Пожалуйста введите корректный адрес телефона');    
+    showError('Пожалуйста введите корректный номер телефона');    
   } else if (!validateURL(website) || !validateURL(vk) || !validateURL(ok) || !validateURL(facebook) || !validateURL(youtube)) {
     showError('Пожалуйста введите корректный адрес сайта');
   } else {
