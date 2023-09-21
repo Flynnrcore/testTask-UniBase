@@ -13,7 +13,7 @@
     <div class="modal-wrapper">
       <h1 class="header-form">Стать партнёром проекта</h1>
       <div class="photo">
-        <p>✱ Логотип (jpeg,png)</p>
+        <p><p class="red">✱</p> Логотип (jpeg,png)</p>
         <div class="upload-photo">
           <img src="/practice-1/assets/upload_icon.svg">
           <button class="upload-photo-btn">Выберите файл</button>
@@ -21,19 +21,19 @@
       </div>
       <form>
         <div class="input-wrapper input-wrapper-small">
-          <input type="text" id="organization" required>
-          <label for="organization"><p>✱</p> Название организации</label>
+          <input type="text" name="organization" id="organization" required>
+          <label for="organization"><p class="red">✱</p> Название организации</label>
         </div>
         <div class="input-wrapper input-wrapper-small">
-          <input type="text" id="phone" required>
-          <label for="phone"><p>✱</p> Телефон</label>
+          <input type="text" name="phone" id="phone" required>
+          <label for="phone"><p class="red">✱</p> Телефон</label>
         </div>
         <div class="input-wrapper input-wrapper-small">
-          <input type="text" id="email" required>
-          <label for="email"><p>✱</p> E-mail</label>
+          <input type="text" name="email" id="email" required>
+          <label for="email"><p class="red">✱</p> E-mail</label>
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <label for="direction"><p>✱</p> Направление</label>
+          <label for="direction"><p class="red">✱</p> Направление</label>
           <select name="direction" id="direction">
             <option value="ecology" selected>Экология</option>
             <option value="tourism">Туризм</option>
@@ -41,35 +41,36 @@
           </select>
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" id="website" required autocomplete="avc.ru">
+          <input type="text" name="website" id="website" autocomplete="avc.ru">
           <img src="./assets/website.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" id="vk" required autocomplete="avc.ru">
+          <input type="text" name="vk" id="vk" autocomplete="avc.ru">
           <img src="./assets/vk.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" id="ok" required autocomplete="avc.ru">
+          <input type="text" name="ok" id="ok" autocomplete="avc.ru">
           <img src="./assets/ok.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" id="facebook" required autocomplete="avc.ru">
+          <input type="text" name="facebook" id="facebook">
           <img src="./assets/facebook.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" name="instagram" id="instagram" required autocomplete="avc.ru">
+          <input type="text" name="instagram" id="instagram">
           <img src="./assets/Instagram.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" name="youtube" id="youtube" required autocomplete="avc.ru">
+          <input type="text" name="youtube" id="youtube">
           <img src="./assets/youtube.svg" alt="иконка" class="input-icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
-          <input type="text" name="chief" id="chief" required autocomplete="avc.ru">
-          <label for="direction">Руководитель</label>
+          <input type="text" name="chief" id="chief">
+          <label for="chief">Руководитель</label>
         </div>
+        <div class="error"></div>
         <button class="form-btn form-btn-submit" type="submit">Стать партнёром проекта</button>
-        <a href="#" class="form-btn-cansel">Отменить</button>
+        <a href="#" class="form-btn-cancel">Отменить</button>
       </form>
     </div>
   </div>
