@@ -74,11 +74,12 @@
 
 .upload-photo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 175px;
     height: 175px;
-    background-image: url(/practice-1/assets/avatar_back.svg);
+    background-image: url(./assets/avatar_back.svg);
     background-repeat: no-repeat;
 }
 
