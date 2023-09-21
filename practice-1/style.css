@@ -169,6 +169,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .form-btn-submit:hover {
@@ -188,6 +189,7 @@ a {
 }
 
 .error {
+    height: 13px;
     text-align: center;
     margin: 0;
     padding-bottom: 5px;
