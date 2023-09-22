@@ -17,6 +17,7 @@
 }
 
 #openModalBtn {
+    position: fixed;
     color: #E5266E;
     background: white;
     width: 147px;
