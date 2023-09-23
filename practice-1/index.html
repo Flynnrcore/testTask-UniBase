@@ -12,14 +12,15 @@
   <div class="modal hide">
     <div class="modal-wrapper">
       <h1 class="header-form">Стать партнёром проекта</h1>
-      <div class="photo">
-        <p><p class="red">✱</p> Логотип (jpeg,png)</p>
-        <div class="upload-photo">
-          <img class="upload-icon" src="./assets/upload_icon.svg">
-          <button class="upload-photo-btn">Выберите файл</button>
-        </div>
-      </div>
       <form>
+        <div class="photo">
+          <p><p class="red">✱</p> Логотип (jpeg,png)</p>
+          <div class="upload-photo">
+            <input type="file" name="photo" class="hide" id="avatarInput" accept="image/*">
+            <img class="upload-icon" src="./assets/upload_icon.svg">
+            <button class="upload-photo-btn" id="uploadButton">Выберите файл</button>
+          </div>
+        </div>
         <div class="input-wrapper input-wrapper-small">
           <input type="text" name="organization" id="organization" required>
           <label for="organization"><p class="red">✱</p> Название организации</label>

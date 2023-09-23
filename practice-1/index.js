@@ -4,6 +4,8 @@ const form = document.querySelector('form');
 const cancelBtn = document.querySelector('.form-btn-cancel');
 const body = document.querySelector('body');
 const errorDiv = document.querySelector('.error');
+const uploadButton = document.getElementById('uploadButton');
+const avatarInput = document.getElementById('avatarInput');
 
 function openModal() {
   modal.classList.toggle('hide');
@@ -14,6 +16,10 @@ openModalBtn.addEventListener('click', openModal);
 function showError(message) {
   errorDiv.textContent = message;
 }
+
+uploadButton.addEventListener('click', () => {
+  avatarInput.click();
+});
 
 function validateNumber(number) {
   const numberRegex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
@@ -37,10 +43,12 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const dataObj = Object.fromEntries(formData);
-  const { phone, email, website, vk, ok, facebook, youtube } = dataObj;
+  const { email, photo, phone, website, vk, ok, facebook, youtube } = dataObj;
 
   if (!validateEmail(email)) {
     showError('Пожалуйста введите корректный e-mail');
+  } else if (photo.size === 0) {
+    showError('Пожалуйста загрузите логотип');
   } else if(!validateNumber(phone)) {
     showError('Пожалуйста введите корректный номер телефона');    
   } else if (!validateURL(website) || !validateURL(vk) || !validateURL(ok) || !validateURL(facebook) || !validateURL(youtube)) {
