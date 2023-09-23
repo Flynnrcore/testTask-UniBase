@@ -1,7 +1,10 @@
+const table = document.getElementById("table");
+const input = document.getElementById("searchInput");
+const tr = table.getElementsByTagName("tr");
+
 const sortTable = (column) => {
-  let table = document.getElementById("postsTable");
   let switching = true;
-  
+
   while (switching) {
     switching = false;
     let shouldSwitch = false;
@@ -12,8 +15,17 @@ const sortTable = (column) => {
       index = i;
       let x = rows[i].getElementsByTagName("td")[column];
       let y = rows[i + 1].getElementsByTagName("td")[column];
+      let xValue = x.innerHTML.toLowerCase();
+      let yValue = y.innerHTML.toLowerCase();
+      let shouldSwitchAscending = false;
       
-      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+      if (!isNaN(xValue) && !isNaN(yValue)) {
+        shouldSwitchAscending = parseInt(xValue) > parseInt(yValue);
+      } else {
+        shouldSwitchAscending = xValue > yValue;
+      }
+      
+      if (shouldSwitchAscending) {
         shouldSwitch = true;
         break;
       }
@@ -55,10 +67,7 @@ const generateTable = (fillFn) => {
 };
 
 const filterTable = () => {
-  let input = document.getElementById("searchInput");
   let filter = input.value.toUpperCase();
-  let table = document.getElementById("postsTable");
-  let tr = table.getElementsByTagName("tr");
   
   for (let i = 0; i < tr.length; i++) {
     let td = tr[i].getElementsByTagName("td");
