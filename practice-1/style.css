@@ -48,6 +48,7 @@
   box-sizing: border-box;
   border: 1px solid #D6DADE;
   border-radius: 12px;
+  background-color: white;
 
   flex-wrap: wrap;
 }
@@ -89,6 +90,7 @@
 
 .upload-photo {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -100,7 +102,14 @@
   background-repeat: no-repeat;
 }
 
-.upload-icon {
+.photo-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+}
+
+.upload-photo-img {
   cursor: pointer;
 }
 
@@ -138,7 +147,7 @@
 }
 
 .input-wrapper input {
-  padding-top: 7px;
+  padding-top: 12px;
   padding-left: 16px;
   padding-right: 16px;
 
@@ -154,7 +163,7 @@
 #direction {
   -webkit-appearance: none;
 
-  padding-top: 7px;
+  padding-top: 12px;
   padding-left: 16px;
   padding-right: 16px;
 
@@ -302,18 +311,17 @@ a {
   }
 
   #openModalBtn {
-    width: 100%;
+    width: 98%;
+    margin-bottom: 20px;
   }
 
   .modal {
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
   }
 
   .modal-wrapper {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
 
@@ -325,16 +333,38 @@ a {
   .photo {
     float: none;
     padding-left: 0;
+    text-align: center;
+    margin-bottom: 10px;
   }
     
   .photo p {
-    margin: 0;
+    margin-bottom: 5px;
   }
 
   .upload-photo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: contain;
   }
+  
+  .photo-close-btn {
+    width: 35%;
+    height: 35%;
+    top: 5%;
+    right: 26%;
+  }
+
+  .upload-photo-img {
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  .upload-photo-btn {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .input-wrapper {
     width: 100%;
   }
