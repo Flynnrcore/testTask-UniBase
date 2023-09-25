@@ -18,7 +18,7 @@
           <div class="upload-photo">
             <input type="file" name="photo" class="hide" id="avatarInput" accept="image/*">
             <img class="upload-icon" src="./assets/upload_icon.svg">
-            <button class="upload-photo-btn" id="uploadButton">Выберите файл</button>
+            <button class="upload-photo-btn" id="uploadButton">Выберите<br> файл</button>
           </div>
         </div>
         <div class="input-wrapper input-wrapper-small">
@@ -36,9 +36,9 @@
         <div class="input-wrapper input-wrapper-large">
           <label for="direction"><p class="red">✱</p> Направление</label>
           <select name="direction" id="direction">
-            <option value="ecology" selected>Экология</option>
-            <option value="tourism">Туризм</option>
-            <option value="sales">Продажи</option>
+            <option value="ecology" class="drop-menu" selected>Экология</option>
+            <option value="tourism" class="drop-menu">Туризм</option>u
+            <option value="sales" class="drop-menu">Продажи</option>
           </select>
         </div>
         <div class="input-wrapper input-wrapper-large">
@@ -55,7 +55,7 @@
         </div>
         <div class="input-wrapper input-wrapper-large">
           <input type="text" name="facebook" id="facebook">
-          <img src="./assets/facebook.svg" alt="иконка" class="input-icon">
+          <img src="./assets/facebook.svg" alt="иконка" class="input-icon" id="icon">
         </div>
         <div class="input-wrapper input-wrapper-large">
           <input type="text" name="instagram" id="instagram">
