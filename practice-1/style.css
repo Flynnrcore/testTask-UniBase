@@ -173,8 +173,6 @@
 }
 
 #direction {
-  -webkit-appearance: none;
-
   padding-top: 12px;
   padding-left: 16px;
   padding-right: 16px;
@@ -364,10 +362,11 @@ a {
   }
   
   .photo-delete-btn {
+    position:absolute;
     width: 30%;
     height: 30%;
     top: 5%;
-    right: 26%;
+    right: 15%;
   }
 
   .upload-photo-img {
