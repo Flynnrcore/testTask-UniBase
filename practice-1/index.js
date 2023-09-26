@@ -5,7 +5,8 @@ const cancelBtn = document.querySelector('.form-btn-cancel');
 const body = document.querySelector('body');
 const errorDiv = document.querySelector('.error');
 const uploadButton = document.getElementById('uploadButton');
-const avatarInput = document.getElementById('avatarInput');
+const photoInput = document.getElementById('photoInput');
+const photoDelete = document.querySelector('.photo-delete-btn');
 
 function openModal() {
   modal.classList.toggle('hide');
@@ -17,8 +18,14 @@ function showError(message) {
   errorDiv.textContent = message;
 }
 
-uploadButton.addEventListener('click', () => {
-  avatarInput.click();
+uploadButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  photoInput.click();
+  showError('');
+});
+
+photoDelete.addEventListener('click', () => {
+  form.elements.photo.value = '';
 });
 
 function validateNumber(number) {
@@ -35,6 +42,7 @@ function validateURL(url) {
   if (url === '') {
     return true;
   }
+
   const urlRegex = /\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   return urlRegex.test(url);
 }
@@ -51,8 +59,16 @@ form.addEventListener('submit', (e) => {
     showError('Пожалуйста загрузите логотип');
   } else if(!validateNumber(phone)) {
     showError('Пожалуйста введите корректный номер телефона');    
-  } else if (!validateURL(website) || !validateURL(vk) || !validateURL(ok) || !validateURL(facebook) || !validateURL(youtube)) {
+  } else if (!validateURL(website)) {
     showError('Пожалуйста введите корректный адрес сайта');
+  } else if (!validateURL(vk)) {
+    showError('Пожалуйста введите корректный адрес страницы во Вконтакте');    
+  } else if (!validateURL(ok)) {
+    showError('Пожалуйста введите корректный адрес страницы в Одноклассниках');    
+  } else if (!validateURL(facebook) ) {
+    showError('Пожалуйста введите корректный адрес страницы Facebook');
+  } else if (!validateURL(youtube)) {
+    showError('Пожалуйста введите корректный адрес страницы Youtube');
   } else {
     showError('');
   }
