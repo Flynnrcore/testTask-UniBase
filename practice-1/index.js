@@ -10,12 +10,10 @@ const photoDelete = document.querySelector('.photo-delete-btn');
 
 function openModal() {
   modal.classList.toggle('hide');
-  document.body.classList.toggle('shading');
 }
 
 openModalBtn.addEventListener('click', openModal);
-
-function showError(message) {
+  function showError(message) {
   errorDiv.textContent = message;
 }
 
@@ -52,7 +50,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const dataObj = Object.fromEntries(formData);
-  const { email, photo, phone, website, vk, ok, facebook, youtube } = dataObj;
+  const { email, photo, phone, website, vk, ok, instagram, facebook, youtube } = dataObj;
 
   if (!validateEmail(email)) {
     showError('Пожалуйста введите корректный e-mail');
@@ -65,7 +63,9 @@ form.addEventListener('submit', (e) => {
   } else if (!validateURL(vk)) {
     showError('Пожалуйста введите корректный адрес страницы во Вконтакте');    
   } else if (!validateURL(ok)) {
-    showError('Пожалуйста введите корректный адрес страницы в Одноклассниках');    
+    showError('Пожалуйста введите корректный адрес страницы в Одноклассниках');  
+  } else if (!validateURL(instagram) ) {
+    showError('Пожалуйста введите корректный адрес страницы в Instagram');  
   } else if (!validateURL(facebook) ) {
     showError('Пожалуйста введите корректный адрес страницы Facebook');
   } else if (!validateURL(youtube)) {
