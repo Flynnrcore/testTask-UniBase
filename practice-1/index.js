@@ -10,6 +10,7 @@ const photoDelete = document.querySelector('.photo-delete-btn');
 
 function openModal() {
   modal.classList.toggle('hide');
+  document.body.classList.toggle('shading');
 }
 
 openModalBtn.addEventListener('click', openModal);

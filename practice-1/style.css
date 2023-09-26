@@ -29,6 +29,10 @@
   border-radius: 8px;
 }
 
+#openModalBtn:active {
+  transform: scale(0.95);
+}
+
 .modal {
   display: flex;
   position: relative;
